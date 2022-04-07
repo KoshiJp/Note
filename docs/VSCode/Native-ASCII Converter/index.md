@@ -1,4 +1,4 @@
-# Native-ASCII Converter
+# VSCode/Native-ASCII Converter
 
 Javaのプロパティファイルの文字コード変換を行うことができる。
 
