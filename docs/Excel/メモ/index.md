@@ -9,7 +9,3 @@
 # CSVデータ
 "01234", ="056789", "abcde"
 ```
-##### Excel表示
-&nbsp;|A&nbsp;&nbsp;|B&nbsp;&nbsp;|C&nbsp;&nbsp;
--|-:|:-|:-
-1|1234|056789|abcde
