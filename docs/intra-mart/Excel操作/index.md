@@ -1,5 +1,7 @@
 # intra-mart/Excel操作
 
+## 操作の流れ
+
 Apache POIを使用してExcelワークブックを操作できる。
 
 ##### Excelワークブック操作手順
@@ -33,6 +35,10 @@ let outputStream = new java.io.FileOutputStream(path);
 ```js
 workbook.write(outputStream);
 ```
+
+
+
+## ワークブックの編集
 
 Excelワークブックの内容は、操作対象に対応するクラスのインスタンスを通じて操作する。
 
@@ -69,4 +75,9 @@ let cell = row.getCell(columnIndex);
 ```js
 // インデックスを指定してセルを作成する。
 let newCell = row.createCell(columnIndex);
+```
+
+##### セルの値を設定する
+```js
+cell.setCellValue(value);
 ```
