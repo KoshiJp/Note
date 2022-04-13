@@ -68,6 +68,7 @@ let databaseResult = new TenantDatabase()
 
 ## 条件分岐
 パラメータの値にて条件判断を行い、条件に該当する場合のみSQL文に含めることができる。
+条件に該当しない場合は実行するSQL文から除去される。
 `IF`と`END`でブロックを構成し、`IF`には条件文を記載する。
 
 ##### sql
@@ -96,4 +97,31 @@ WHERE SAMPLE_COLUMN_1 = 'condition_value_1'
 SELECT * FROM SAMPLE_TABLE
 WHERE SAMPLE_COLUMN_1 = 'condition_value_1'
 AND SAMPLE_COLUMN_2 = 'condition_value_2'
+```
+
+## 条件分岐の結果により不正なSQL文となることを防ぐ
+`IF`の条件判断に該当しない場合にSQL文を除去した結果、不正なSQL文となる場合がある。
+`BEGIN`と`END`でブロックを構成することで内部のすべての`IF`の条件判断に該当しない場合に
+`BEGIN`と`END`の区間すべてのSQL文から除去することができる。
+
+##### BEGIN/ENDを使用していないsqlの場合
+```sql
+-- sample_param_name_1がnullの場合WHERE句が空となってしまい、エラーとなる。
+SELECT * FROM SAMPLE_TABLE
+WHERE
+/*IF sample_param_name_1 != null*/
+AND SAMPLE_COLUMN_1 = /*sample_param_name_1*/
+/*END*/
+```
+
+##### BEGIN/ENDを使用したsqlの場合
+```sql
+-- sample_param_name_1がnullの場合WHERE句全体が除去される。
+SELECT * FROM SAMPLE_TABLE
+/*BEGIN*/
+    WHERE
+    /*IF sample_param_name_1 != null*/
+    AND SAMPLE_COLUMN_1 = /*sample_param_name_1*/
+    /*END*/
+/*END*/
 ```
