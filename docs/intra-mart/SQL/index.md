@@ -14,14 +14,16 @@ SQLファイルはS2JDBCによって処理されるものと思われる。
 SQLをツールで実行する場合は`'sample'`というリテラル値での選択条件となる。
 intra-martで実行する際にはリテラル値`'sample'`をパラメータ`sample_param_name`の値`'condition_value'`に置き換えて実行される。
 
+##### sql
 ```sql
 SELECT * FROM SAMPLE_TABLE
 WHERE SAMPLE_COLUMN = /*sample_param_name*/'sample'
 ```
+##### JavaScript
 ```js
 let databaseResult = new TenantDatabase()
     .executeByTemplate(SQL_FILE_PATH, {
-        sample_param_name: DbParameter.string('condition_value')
+        sample_param_name: DbParameter.string("condition_value")
     });
 ```
 
@@ -29,17 +31,19 @@ let databaseResult = new TenantDatabase()
 IN句の複数のリテラル値をパラメータの配列の値で置き換えることができる。
 SQLのリテラル値の数とパラメータの配列の要素数は一致させる必要がある。
 
+##### sql
 ```sql
 SELECT * FROM SAMPLE_TABLE
 WHERE SAMPLE_COLUMN IN /*sample_params*/('value1', 'value2', 'value3')
 ```
+##### JavaScript
 ```js
 let databaseResult = new TenantDatabase()
     .executeByTemplate(SQL_FILE_PATH, {
         sample_params: [
-            DbParameter.string('condition_value1'),
-            DbParameter.string('condition_value2'),
-            DbParameter.string('condition_value3'),
+            DbParameter.string("condition_value1"),
+            DbParameter.string("condition_value2"),
+            DbParameter.string("condition_value3"),
         ]
     });
 ```
@@ -50,9 +54,11 @@ let databaseResult = new TenantDatabase()
 
 パラメータはDbParameterオブジェクトではなく文字列を指定すればよい。
 
+##### sql
 ```sql
 SELECT /*$top*/ * FROM SAMPLE_TABLE
 ```
+##### JavaScript
 ```js
 let databaseResult = new TenantDatabase()
     .executeByTemplate(SQL_FILE_PATH, {
@@ -60,3 +66,34 @@ let databaseResult = new TenantDatabase()
     });
 ```
 
+## 条件分岐
+パラメータの値にて条件判断を行い、条件に該当する場合のみSQL文に含めることができる。
+`IF`と`END`でブロックを構成し、`IF`には条件文を記載する。
+
+##### sql
+```sql
+SELECT * FROM SAMPLE_TABLE
+WHERE SAMPLE_COLUMN_1 = /*sample_param_name_1*/'sample'
+/*IF sample_param_name_2 != null*/
+AND SAMPLE_COLUMN_2 = /*sample_param_name_2*/
+/*END*/
+```
+##### JavaScript
+```js
+let databaseResult = new TenantDatabase()
+    .executeByTemplate(SQL_FILE_PATH, {
+        sample_param_name_1: DbParameter.string("condition_value_1")
+        sample_param_name_2: DbParameter.string("condition_value_2")
+    });
+```
+##### `sample_param_name_2`が`null`の場合に実行されるSQL
+```sql
+SELECT * FROM SAMPLE_TABLE
+WHERE SAMPLE_COLUMN_1 = 'condition_value_1'
+```
+##### `sample_param_name_2`が`null`でない場合に実行されるSQL
+```sql
+SELECT * FROM SAMPLE_TABLE
+WHERE SAMPLE_COLUMN_1 = 'condition_value_1'
+AND SAMPLE_COLUMN_2 = 'condition_value_2'
+```
