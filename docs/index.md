@@ -6,6 +6,6 @@
     - [メモ](SQL%20Server/メモ/)
 - [intra-mart](intra-mart/)
     - [メモ](intra-mart/メモ/)
+    - [Excel操作](intra-mart/Excel操作/)
 - [Excel](Excel/)
     - [メモ](Excel/メモ/)
-    - [Excel操作](Excel/Excel操作/)
