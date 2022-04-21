@@ -14,12 +14,12 @@ SQLファイルはS2JDBCによって処理されるものと思われる。
 SQLをツールで実行する場合は`'sample'`というリテラル値での選択条件となる。
 intra-martで実行する際にはリテラル値`'sample'`をパラメータ`sample_param_name`の値`'condition_value'`に置き換えて実行される。
 
-##### sql
+###### sql
 ```sql
 SELECT * FROM SAMPLE_TABLE
 WHERE SAMPLE_COLUMN = /*sample_param_name*/'sample'
 ```
-##### JavaScript
+###### JavaScript
 ```js
 let databaseResult = new TenantDatabase()
     .executeByTemplate(SQL_FILE_PATH, {
@@ -31,12 +31,12 @@ let databaseResult = new TenantDatabase()
 IN句の複数のリテラル値をパラメータの配列の値で置き換えることができる。
 SQLのリテラル値の数とパラメータの配列の要素数は一致させる必要がある。
 
-##### sql
+###### sql
 ```sql
 SELECT * FROM SAMPLE_TABLE
 WHERE SAMPLE_COLUMN IN /*sample_params*/('value1', 'value2', 'value3')
 ```
-##### JavaScript
+###### JavaScript
 ```js
 let databaseResult = new TenantDatabase()
     .executeByTemplate(SQL_FILE_PATH, {
@@ -54,11 +54,11 @@ let databaseResult = new TenantDatabase()
 
 パラメータはDbParameterオブジェクトではなく文字列を指定すればよい。
 
-##### sql
+###### sql
 ```sql
 SELECT /*$top*/ * FROM SAMPLE_TABLE
 ```
-##### JavaScript
+###### JavaScript
 ```js
 let databaseResult = new TenantDatabase()
     .executeByTemplate(SQL_FILE_PATH, {
@@ -71,7 +71,7 @@ let databaseResult = new TenantDatabase()
 条件に該当しない場合は実行するSQL文から除去される。
 `IF`と`END`でブロックを構成し、`IF`には条件文を記載する。
 
-##### sql
+###### sql
 ```sql
 SELECT * FROM SAMPLE_TABLE
 WHERE SAMPLE_COLUMN_1 = /*sample_param_name_1*/'sample'
@@ -79,7 +79,7 @@ WHERE SAMPLE_COLUMN_1 = /*sample_param_name_1*/'sample'
 AND SAMPLE_COLUMN_2 = /*sample_param_name_2*/
 /*END*/
 ```
-##### JavaScript
+###### JavaScript
 ```js
 let databaseResult = new TenantDatabase()
     .executeByTemplate(SQL_FILE_PATH, {
@@ -87,12 +87,12 @@ let databaseResult = new TenantDatabase()
         sample_param_name_2: DbParameter.string("condition_value_2")
     });
 ```
-##### `sample_param_name_2`が`null`の場合に実行されるSQL
+###### `sample_param_name_2`が`null`の場合に実行されるSQL
 ```sql
 SELECT * FROM SAMPLE_TABLE
 WHERE SAMPLE_COLUMN_1 = 'condition_value_1'
 ```
-##### `sample_param_name_2`が`null`でない場合に実行されるSQL
+###### `sample_param_name_2`が`null`でない場合に実行されるSQL
 ```sql
 SELECT * FROM SAMPLE_TABLE
 WHERE SAMPLE_COLUMN_1 = 'condition_value_1'
@@ -104,7 +104,7 @@ AND SAMPLE_COLUMN_2 = 'condition_value_2'
 `BEGIN`と`END`でブロックを構成することで内部のすべての`IF`の条件判断に該当しない場合に
 `BEGIN`と`END`の区間すべてのSQL文から除去することができる。
 
-##### BEGIN/ENDを使用していないsqlの場合
+###### SQL - BEGIN/ENDを使用していない場合
 ```sql
 -- sample_param_name_1がnullの場合WHERE句が空となってしまい、エラーとなる。
 SELECT * FROM SAMPLE_TABLE
@@ -114,7 +114,7 @@ AND SAMPLE_COLUMN_1 = /*sample_param_name_1*/
 /*END*/
 ```
 
-##### BEGIN/ENDを使用したsqlの場合
+###### SQL - BEGIN/ENDを使用した場合
 ```sql
 -- sample_param_name_1がnullの場合WHERE句全体が除去される。
 SELECT * FROM SAMPLE_TABLE
