@@ -5,6 +5,7 @@
 - [SQL Server](SQL%20Server/)
     - [メモ](SQL%20Server/メモ/)
 - [intra-mart](intra-mart/)
+    - [資料](intra-mart/資料/)
     - [メモ](intra-mart/メモ/)
     - [SQL](intra-mart/SQL/)
     - [Excel操作](intra-mart/Excel操作/)
