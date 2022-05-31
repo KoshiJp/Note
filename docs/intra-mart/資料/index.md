@@ -42,6 +42,7 @@
 [intra-mart Accel Platform スクリプト開発向けim-BizAPI - Debugオブジェクト](https://api.intra-mart.jp/iap/apilist-ssjs/doc/platform/Debug/index.html)<br/>
 [intra-mart Accel Platform スクリプト開発向けim-BizAPI - Fileオブジェクト](https://api.intra-mart.jp/iap/apilist-ssjs/doc/platform/File/index.html)<br/>
 [intra-mart Accel Platform スクリプト開発向けim-BizAPI - Identifierオブジェクト](https://api.intra-mart.jp/iap/apilist-ssjs/doc/platform/Identifier/index.html)<br/>
+[intra-mart Accel Platform スクリプト開発向けim-BizAPI - ImJsonオブジェクト](https://api.intra-mart.jp/iap/apilist-ssjs/doc/platform/ImJson/index.html)
 [intra-mart Accel Platform スクリプト開発向けim-BizAPI - Loggerオブジェクト](https://api.intra-mart.jp/iap/apilist-ssjs/doc/platform/Logger/index.html)<br/>
 [intra-mart Accel Platform スクリプト開発向けim-BizAPI - NewLockオブジェクト](https://api.intra-mart.jp/iap/apilist-ssjs/doc/platform/NewLock/index.html)<br/>
 [intra-mart Accel Platform スクリプト開発向けim-BizAPI - Requestオブジェクト](https://api.intra-mart.jp/iap/apilist-ssjs/doc/platform/Request/index.html)<br/>
