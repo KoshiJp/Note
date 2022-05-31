@@ -1,4 +1,4 @@
-# intra-mart/Excel操作
+# intra-mart / Excel操作
 
 Apache POIを使用してExcelワークブックを操作できる。
 

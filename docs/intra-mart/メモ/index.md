@@ -1,4 +1,4 @@
-# intra-mart/メモ
+# intra-mart / メモ
 
 ## 日付と文字列の相互変換
 

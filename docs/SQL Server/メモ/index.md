@@ -1,4 +1,4 @@
-# SQL Server/メモ
+# SQL Server / メモ
 
 ## NULL値を指定の値に置き換える
 

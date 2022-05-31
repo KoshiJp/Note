@@ -1,4 +1,4 @@
-# intra-mart/資料
+# intra-mart / 資料
 
 
 ## intra-mart Accel Series ドキュメントライブラリ
