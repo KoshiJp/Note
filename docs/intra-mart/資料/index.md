@@ -31,13 +31,39 @@
 
 ## スクリプト開発向けim-BizAPI
 [intra-mart Accel Platform スクリプト開発向けim-BizAPI](https://api.intra-mart.jp/iap/apilist-ssjs/doc/index.html)<br/>
-[intra-mart Accel Platform スクリプト開発向けim-BizAPI - Debugオブジェクト](https://api.intra-mart.jp/iap/apilist-ssjs/doc/platform/Debug/index.html)<br/>
+### Platform
+#### グローバル関数
+[intra-mart Accel Platform スクリプト開発向けim-BizAPI - GlobalFunctionオブジェクト](https://api.intra-mart.jp/iap/apilist-ssjs/doc/platform/GlobalFunction/index.html)<br/>
+#### 標準
 [intra-mart Accel Platform スクリプト開発向けim-BizAPI - Clientオブジェクト](https://api.intra-mart.jp/iap/apilist-ssjs/doc/platform/Client/index.html)<br/>
+[intra-mart Accel Platform スクリプト開発向けim-BizAPI - Constantオブジェクト](https://api.intra-mart.jp/iap/apilist-ssjs/doc/platform/Constant/index.html)<br/>
+[intra-mart Accel Platform スクリプト開発向けim-BizAPI - Contentオブジェクト](https://api.intra-mart.jp/iap/apilist-ssjs/doc/platform/Content/index.html)<br/>
+[intra-mart Accel Platform スクリプト開発向けim-BizAPI - Contextsオブジェクト](https://api.intra-mart.jp/iap/apilist-ssjs/doc/platform/Contexts/index.html)<br/>
+[intra-mart Accel Platform スクリプト開発向けim-BizAPI - Debugオブジェクト](https://api.intra-mart.jp/iap/apilist-ssjs/doc/platform/Debug/index.html)<br/>
+[intra-mart Accel Platform スクリプト開発向けim-BizAPI - Fileオブジェクト](https://api.intra-mart.jp/iap/apilist-ssjs/doc/platform/File/index.html)<br/>
+[intra-mart Accel Platform スクリプト開発向けim-BizAPI - Identifierオブジェクト](https://api.intra-mart.jp/iap/apilist-ssjs/doc/platform/Identifier/index.html)<br/>
+[intra-mart Accel Platform スクリプト開発向けim-BizAPI - Loggerオブジェクト](https://api.intra-mart.jp/iap/apilist-ssjs/doc/platform/Logger/index.html)<br/>
+[intra-mart Accel Platform スクリプト開発向けim-BizAPI - NewLockオブジェクト](https://api.intra-mart.jp/iap/apilist-ssjs/doc/platform/NewLock/index.html)<br/>
+[intra-mart Accel Platform スクリプト開発向けim-BizAPI - Requestオブジェクト](https://api.intra-mart.jp/iap/apilist-ssjs/doc/platform/Request/index.html)<br/>
+[intra-mart Accel Platform スクリプト開発向けim-BizAPI - StringUtilオブジェクト](https://api.intra-mart.jp/iap/apilist-ssjs/doc/platform/StringUtil/index.html)<br/>
 [intra-mart Accel Platform スクリプト開発向けim-BizAPI - URLオブジェクト](https://api.intra-mart.jp/iap/apilist-ssjs/doc/platform/URL/index.html)<br/>
+[intra-mart Accel Platform スクリプト開発向けim-BizAPI - Unicodeオブジェクト](https://api.intra-mart.jp/iap/apilist-ssjs/doc/platform/Unicode/index.html)<br/>
+#### データベース
+[intra-mart Accel Platform スクリプト開発向けim-BizAPI - DbParameterオブジェクト](https://api.intra-mart.jp/iap/apilist-ssjs/doc/platform/DbParameter/index.html)<br/>
+[intra-mart Accel Platform スクリプト開発向けim-BizAPI - TenantDatabaseオブジェクト](https://api.intra-mart.jp/iap/apilist-ssjs/doc/platform/TenantDatabase/index.html)<br/>
+[intra-mart Accel Platform スクリプト開発向けim-BizAPI - Transactionオブジェクト](https://api.intra-mart.jp/iap/apilist-ssjs/doc/platform/Transaction/index.html)<br/>
+#### 情報オブジェクト
+[intra-mart Accel Platform スクリプト開発向けim-BizAPI - AccountContextオブジェクト](https://api.intra-mart.jp/iap/apilist-ssjs/doc/platform/AccountContext/index.html)<br/>
+[intra-mart Accel Platform スクリプト開発向けim-BizAPI - ClientContextオブジェクト](https://api.intra-mart.jp/iap/apilist-ssjs/doc/platform/ClientContext/index.html)<br/>
+
+### テナント
 [intra-mart Accel Platform スクリプト開発向けim-BizAPI - CalendarInfoManagerオブジェクト](https://api.intra-mart.jp/iap/apilist-ssjs/doc/tenant/CalendarInfoManager/index.html)<br/>
 [intra-mart Accel Platform スクリプト開発向けim-BizAPI - DateTimeFormatterオブジェクト](https://api.intra-mart.jp/iap/apilist-ssjs/doc/tenant/DateTimeFormatter/index.html)<br/>
-[intra-mart Accel Platform スクリプト開発向けim-BizAPI - Transactionオブジェクト](https://api.intra-mart.jp/iap/apilist-ssjs/doc/platform/Transaction/index.html)<br/>
-[intra-mart Accel Platform スクリプト開発向けim-BizAPI - DbParameterオブジェクト](https://api.intra-mart.jp/iap/apilist-ssjs/doc/platform/DbParameter/index.html)<br/>
+
+### IM-共通マスタ
+[intra-mart Accel Platform スクリプト開発向けim-BizAPI - UserContextオブジェクト](https://api.intra-mart.jp/iap/apilist-ssjs/doc/im_master/UserContext/index.html)
+
+
 
 ## IM-共通マスタ 検索画面仕様書
 [intra-mart Accel Platform IM-共通マスタ 検索画面仕様書](https://document.intra-mart.jp/library/iap/public/im_master/im_master_search_specification/index.html)<br/>
