@@ -1,0 +1,29 @@
+# Visual Studio / メモ
+
+## Code Snippets
+
+### DebuggerStepThrough
+
+###### XML
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>DebuggerStepThrough</Title>
+      <Author>KoshiJp</Author>
+      <Description>Attribute DebuggerStepThrough</Description>
+      <Shortcut>dst</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp"><![CDATA[[DebuggerStepThrough]]]>$end$</Code>
+      <Imports>
+        <Import>
+          <Namespace>System.Diagnostics</Namespace>
+        </Import>
+      </Imports>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
+
+```
